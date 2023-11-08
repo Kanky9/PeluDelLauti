@@ -1,12 +1,12 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TurnosComponent } from './turnos/turnos.component';
-import { DegEnPuntaComponent } from './galery/deg-en-punta/deg-en-punta.component';
-import { DegradeComponent } from './galery/degrade/degrade.component';
-import { ClasicoComponent } from './galery/clasico/clasico.component';
-import { CrestaComponent } from './galery/cresta/cresta.component';
-import { DisenioComponent } from './galery/disenio/disenio.component';
-import { InicioComponent } from './inicio/inicio.component';
+import { DegEnPuntaComponent } from './Components/galery/deg-en-punta/deg-en-punta.component';
+import { DegradeComponent } from './Components/galery/degrade/degrade.component';
+import { ClasicoComponent } from './Components/galery/clasico/clasico.component';
+import { CrestaComponent } from './Components/galery/cresta/cresta.component';
+import { DisenioComponent } from './Components/galery/disenio/disenio.component';
+import { InicioComponent } from './Components/inicio/inicio.component';
+import { TurnoDetalleComponent } from './Components/Turnos/turno-detalle/turno-detalle.component';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   }, // Cambia 'inicio' a '' para la ruta base
   {
     path: 'turnos',
-    component: TurnosComponent
+    component: TurnoDetalleComponent
   },
   {
     path: 'deg-en-punta',
@@ -49,52 +49,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*{
-    path: 'gallery',
-    children: [
-      { path: '', redirectTo: 'deg-en-punta', pathMatch: 'full' },
-      { path: 'deg-en-punta', component: DegEnPuntaComponent }
-    ]
-  },
-  {
-    path: 'gallery',
-    children: [
-      { path: '', redirectTo: 'degrade', pathMatch: 'full' },
-      { path: 'degrade', component: DegradeComponent }
-    ]
-  },
-  {
-    path: 'gallery',
-    children: [
-      { path: '', redirectTo: 'clasicos', pathMatch: 'full' },
-      { path: 'clasico', component: ClasicoComponent  }
-    ]
-  },
-  {
-    path: 'gallery',
-    children: [
-      { path: '', redirectTo: 'cresta', pathMatch: 'full' },
-      { path: 'cresta', component: CrestaComponent  }
-    ]
-  },
-  {
-    path: 'gallery',
-    children: [
-      { path: '', redirectTo: 'disenio', pathMatch: 'full' },
-      { path: 'disenio', component: DisenioComponent  }
-    ]
-  }*/

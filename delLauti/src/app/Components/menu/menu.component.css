@@ -12,7 +12,7 @@
 	width: 100%;
     background-image:
         linear-gradient(135deg, #6666667e 0%, #00000098 100%), 
-        url('../../assets/img/img-menu/peluImg1920.jpg');
+        url('../../../assets/img/img-menu/peluImg1920.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -100,6 +100,7 @@
     border: 3px solid #f3f3f3;
     text-align: center;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .items:hover{
