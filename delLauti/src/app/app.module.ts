@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgOptimizedImage } from '@angular/common';
-  
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'; 
+   
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PresentationComponent } from './Components/presentation/presentation.component';
@@ -15,10 +16,8 @@ import { CrestaComponent } from './Components/galery/cresta/cresta.component';
 import { DisenioComponent } from './Components/galery/disenio/disenio.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
 import { MenuComponent } from './Components/menu/menu.component';
+import { TurnosComponent } from './Components/turnos/turnos.component';
 import { FormsModule } from '@angular/forms';
-import { TurnoCalendarioComponent } from './Components/Turnos/turno-calendario/turno-calendario.component';
-import { TurnoDetalleComponent } from './Components/Turnos/turno-detalle/turno-detalle.component';
-import { TurnoReservaComponent } from './Components/Turnos/turno-reserva/turno-reserva.component';
 
 
 @NgModule({
@@ -35,17 +34,18 @@ import { TurnoReservaComponent } from './Components/Turnos/turno-reserva/turno-r
     CrestaComponent,
     DisenioComponent,
     MenuComponent,
-    TurnoCalendarioComponent,
-    TurnoDetalleComponent,
-    TurnoReservaComponent,
+    TurnosComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    CommonModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

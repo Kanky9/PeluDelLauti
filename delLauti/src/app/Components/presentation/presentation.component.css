@@ -1,20 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
 *{
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.container{
+.cont{
+    margin-top: 100px;
+    margin-bottom: 150px;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
 }
 
 .img__container{
@@ -55,21 +54,39 @@
 .presentation__parrafo{
     font-size: 20px;
     text-align: center;
+    padding-bottom: 15px;
 }
 
-.contactame__container{
-    text-align: center;
-    grid-column: 1/13;
-    grid-row: 2/3;
-    padding-top: 200px;
-}
 
 .contactame{
     padding-bottom: 100px;
-    background: #f9ba26;
+    background: #F4D508;
     color: #303030;
     font-weight: 500;
     padding: 15px;
     border-radius: 30px;
     font-size: 20px;
 }
+
+@media screen and (max-width: 690px){
+    .subtitle__container{
+        padding-bottom: 10px;
+    }
+
+    .subtitle__600{
+        font-size: 35px;
+    }
+
+    .subtitle__500{
+        font-size: 25px;
+    }
+
+    .presentation__container{
+        padding-bottom: 70px;
+    }
+
+    .presentation__parrafo{
+        font-size: 15px;
+    }
+}
+

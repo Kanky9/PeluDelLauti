@@ -6,7 +6,7 @@ import { ClasicoComponent } from './Components/galery/clasico/clasico.component'
 import { CrestaComponent } from './Components/galery/cresta/cresta.component';
 import { DisenioComponent } from './Components/galery/disenio/disenio.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
-import { TurnoDetalleComponent } from './Components/Turnos/turno-detalle/turno-detalle.component';
+import { TurnosComponent } from './Components/turnos/turnos.component';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   }, // Cambia 'inicio' a '' para la ruta base
   {
     path: 'turnos',
-    component: TurnoDetalleComponent
+    component: TurnosComponent
   },
   {
     path: 'deg-en-punta',

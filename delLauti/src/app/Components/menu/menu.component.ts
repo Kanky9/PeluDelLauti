@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit{
   
+  isClicked: boolean = false; 
   
   ngOnInit(): void {
 
   }
-
   
-
+  onElementClick() {
+    this.isClicked = !this.isClicked;
+  }
 }

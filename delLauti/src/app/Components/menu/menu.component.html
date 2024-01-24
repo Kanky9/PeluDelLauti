@@ -1,18 +1,65 @@
-<section class="container" >
+<section class="cont" >
 
-    <div class="grid">
+    <div class="flex">
     
         <div class="items__menu--container">
             <nav class="items__nav">
-                <a routerLink="inicio" class="items items--1">Inicio</a>
-                <a routerLink="turnos" class="items items--2">Turnos</a>
-                <a href="https://wa.me/543462334472?text=Hola,%20tenes%20turnos%20disponibles?" class="items items--3">Contactos</a>
+                <ul class="ul">
+                    <li class="items__li">
+                        <a routerLink="/inicio" class="items items--1">Inicio</a>
+                    </li>
+                    
+                    <li class="items__li">
+                        <a routerLink="/turnos" class="items items--2">Turnos</a>
+                    </li>
+
+                    <li class="items__li">
+                        <a href="https://wa.me/543462334472?text=Hola,%20tenes%20turnos%20disponibles?" target="_blank"  class="items items--3">Contactame</a>
+                    </li>
+
+                    <li class="items__li">
+                        <a routerLink="" class="items items--2">Iniciar sesión</a>
+                    </li>
+                </ul>
             </nav>
         </div>
+    </div>
     
-        <nav class="cont__logo">
-            <img src="../../../assets/img/img-menu/logo1.png" alt="" class="logo">
+    <div class="flex__responsive" >
+            <nav class="navbar navbar-expand-lg " [ngClass]="{'active': isClicked}">
+                <div class="container-fluid" >
+                    <button (click)="onElementClick()" class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" routerLink="/inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"  aria-current="page" routerLink="/turnos" >Turnos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="https://wa.me/543462334472?text=Hola,%20tenes%20turnos%20disponibles?" target="_blank" >Contactame</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" >Iniciar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </div>
+</section>
+
+
+<!-- Estilos que saqué:
+        <div class="cont__logo--div">
+            <nav class="cont__logo">
+            <img src="../../../assets/img/img-menu/DelLautiLogo.png" alt="" class="logo">
         </nav>
+        </div>
     
         <div class="menu__title--container">
     
@@ -20,10 +67,12 @@
                 <h1 class="menu__title">Del Lauty</h1>
                 <h2 class="menu__subtitle">Peluquería masculina</h2>
             </nav>
-    
-            <nav class="contactame__menu--container">
+            
+            
+             <nav class="contactame__menu--container">
                 <a href="https://wa.me/543462334472?text=Hola,%20tenes%20turnos%20disponibles?" class="contactame__link" target="_blank">Contactame ahora</a>
             </nav>
+           
         </div>
     
         <div class="hero__wave--grid">
@@ -37,8 +86,4 @@
                     </svg>
                 </div>
             </div>
-        </div>
-    
-    </div>
-
-</section>
+        </div> --> 

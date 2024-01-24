@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
 *{
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.container{
+.cont{
     width: 100%;
-    max-height: 1100px;
-    height: 100%;
+	max-height: fit-content;
+    height: auto;
     background: #f2f2f2;
+}
+
+.proyectsClick{
+	display: none; 
 }
 
 .subtitle{
@@ -26,7 +27,7 @@
 	padding: 0 20px 80px 20px;
     display: grid;
     width: 100%;
-    height: 950px;
+    height: auto;
     grid-template-areas: 
     "img1 img1 img2 img3"
     "img1 img1 img4 img5" ;
@@ -36,13 +37,13 @@
 .proyects__container{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
 }
 
 .proyects__img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     cursor: pointer;
 }
@@ -65,7 +66,7 @@
 
 .proyects__hover{
 	position: absolute;
-	background: #f098198c;
+	background: #ffdd00bc;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -98,4 +99,62 @@
 
 .proyects__container:hover .proyects__hover{
 	transform: translateX(0%);
+}
+
+/* Responsive: */
+
+@media screen and (max-width: 865px){
+
+	.proyectsClick{
+        display: block;
+		position: absolute;
+        bottom: -20px;
+        color: #fff;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+	}
+
+	.grid{
+		grid-template-areas: 
+		"img3 img3 img2 img2"
+		"img1 img1 img1 img1"
+		"img4 img4 img5 img5";
+	}
+
+   #mi-imagen:hover + #mi-titulo{
+        visibility: hidden;
+        transition: .2s;
+    }
+}
+
+
+@media screen and (max-width: 467px){
+    .grid{
+		grid-template-areas:
+		"img1"
+		"img2"
+		"img3"
+		"img4"
+		"img5";
+		height: auto;
+		grid-template-rows: repeat(5, auto);
+		grid-auto-rows: 250px;
+		gap: 10px;
+	}
+
+}
+
+@media screen and (max-width: 250px){
+	.proyectsClick{
+		font-size: 17px;
+	}
+}
+
+@media screen and (min-width: 1600px){
+	.grid{
+		grid-template-areas: 
+			"img2 img3 img1 img4 img5";	
+	}
 }

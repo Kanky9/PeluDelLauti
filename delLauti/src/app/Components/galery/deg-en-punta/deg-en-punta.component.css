@@ -1,16 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
 *{
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.container.activeBlur{
+.cont.activeBlur{
     filter: blur(10px);
 }
 
-.container.inactiveBlur{
+.cont.inactiveBlur{
     filter: blur(0);
 }
 

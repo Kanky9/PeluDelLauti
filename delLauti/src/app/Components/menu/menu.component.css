@@ -1,49 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
 *{
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.container{
-    max-height: 1000px;
+.items__menu--responsive{
+    display: none;
+}
+
+.cont {
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    background-image: url('../../../assets/img/img-menu/delLautiFondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+
+.cont::after {
+    margin: 0;
+    padding: 0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altura de las ondas */
+    background-color: #fff; /* Color de las ondas */
+    z-index: 1; /* Coloca las ondas detrás del contenido principal */
+    border-radius: 50% 50% 0 0; /* Forma ondulada */
+}
+
+.flex{
+    width: 100%;
     height: 100vh;
-	width: 100%;
-    background-image:
-        linear-gradient(135deg, #6666667e 0%, #00000098 100%), 
-        url('../../../assets/img/img-menu/peluImg1920.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
+    display: flex;
+    justify-content: center;
 }
 
-.grid{
-    max-height: 1000px;
-    height: 120%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(11, 1fr);
+
+.items__menu--container{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
-.cont__logo{
+.items__nav{
+    text-align: center; 
+    margin: 0;
+}
+
+.items__ul{ 
+    width: 600px;
+    text-align: center;
+}
+
+.items__li{
+    display: table-cell; 
+    padding: 15px 0;
+}
+
+.items{
+    text-align: center;
+    flex-wrap: wrap;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;     
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.items:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.items:hover:after{
+    width: 100%; 
+    left: 0;
+    background-color: #F4D508;
+}
+
+
+
+@media screen and (max-width: 745px){
+
+    .flex{
+        display: none;
+    }
+
+    .flex__responsive{
+        display: flex;
+        width: 100%;
+        transition: all 2s;
+    }
+
+    .navbar{
+        width: 100%;
+        background: transparent;
+        justify-content: start;
+        align-items: start;
+        height: 70vh;
+        transition: all 2s;
+    }
+
+    .active{
+        z-index: 10;
+        background: #ffdd00bc;
+        color: #000;
+        transition: all 2s;
+    }
+
+   .navbar-collapse{
+    transition: all 1s;
+   }
+   
+    .navbar-toggler{
+        background: #F4D508;
+        color: #303030;
+    }
+
+    .nav-item{
+        width: max-content;
+        padding: 5px;
+        background: transparent;
+        transition: all 2s;
+    }
+
+    .nav-link{
+        padding: 10px;
+        border-radius: 50px;
+        background: #F4D508;
+        font-weight: 600;
+        transition: all 2s;
+    }
+}
+
+@media screen and (max-width: 610px){
+    .cont { 
+        background-image: url('../../../assets/img/img-menu/delLautiFondoResponsive.png');
+    }
+}
+
+@media screen and (max-width: 460px){
+    
+    .cont {
+        background-image: url('../../../assets/img/img-menu/delLautiFondoResponsive2.png');
+    }
+}
+
+@media screen and (max-width: 370px){
+    
+    .cont {
+        background-image: url('../../../assets/img/img-menu/delLautiFondoResponsive3.png');
+    }
+}
+
+@media screen and (max-width: 300px){
+    
+    .cont {
+        background-image: url('../../../assets/img/img-menu/delLautiFondoResponsive4.png');
+    }
+}
+
+
+
+
+/* Estilos que saqué: 
+.items{
+    color: #f3f3f3;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-bottom: 2px solid #f3f3f3;
+    text-align: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.items:hover{
+    background: #F4D508;
+    color: #000;
+    border-bottom: 2px solid #F4D508;
+}
+.cont__logo--div{
     grid-column: 1/5;
     grid-row: 1/6;
     padding-top: 60px;
     padding-left: 60px;
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: auto;
 }
 
 .logo{
-    width: 200px;
+    width: clamp(200px, 100%, 250px);
     border-radius: 100%;
+    text-align: center;
 }
 
 .menu__title--container{
     grid-column: 1/8;
-    grid-row: 6/9;
+    grid-row: 7/9;
     padding-left: 50px;
     
 }
@@ -58,9 +232,25 @@
     color: #f3f3f3;
     font-size: 40px;
     margin: 0;
+}*/
+/*
+.contactame__menu--container{
+    margin-top: 25px;
+}
+
+.contactame__link{
+    border: 2px solid #f3f3f3;
+    background: #f3f3f3;
+    border-radius: 50px;
+    padding: 15px;
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .contactame__menu--container{
+    z-index: 10;
     padding-top: 25px;
 }
 
@@ -78,40 +268,14 @@
     color: #f3f3f3;
     border: 3px solid #f3f3f3;
     padding: 12px;
-}
-
-.items__menu--container{
-    padding-top: 20px;
-	grid-column: 1/13 ;
-	grid-row: 1/2;
-}
-
-.items__nav{
-    text-align: end; 
-}
-
-.items{
-    color: #f3f3f3;
-    margin-right: 20px;
-    padding: 10px 15px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 50px;
-    border: 3px solid #f3f3f3;
-    text-align: center;
-    flex-wrap: wrap;
     cursor: pointer;
 }
 
-.items:hover{
-    background: #f3f3f3;
-    color: #000;
-    border: 3px solid #f3f3f3;
-}
-
 .hero__wave--grid{
-    height: 390px;
-	grid-column: 1/13;
+    height: 380px;
+	grid-column: 1/12;
 	grid-row:  9/12 end;
 	width: 100%;
 }
+
+*/
