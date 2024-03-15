@@ -151,7 +151,7 @@
     }
 }
 
-@media screen and (max-width: 610px){
+@media screen and (max-width: 712px){
     .cont { 
         background-image: url('../../../assets/img/img-menu/delLautiFondoResponsive.png');
     }

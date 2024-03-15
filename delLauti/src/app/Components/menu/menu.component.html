@@ -10,15 +10,15 @@
                     </li>
                     
                     <li class="items__li">
-                        <a routerLink="/turnos" class="items items--2">Turnos</a>
+                        <a routerLink="/turnos" (click)="scrollToBottomTurnos()" class="items items--2">Turnos</a>
+                    </li>
+
+                    <li class="items__li">
+                        <a routerLink="/ayuda" (click)="scrollToBottomAyuda()"  class="items items--2">Ayuda</a>
                     </li>
 
                     <li class="items__li">
                         <a href="https://wa.me/543462334472?text=Hola,%20tenes%20turnos%20disponibles?" target="_blank"  class="items items--3">Contactame</a>
-                    </li>
-
-                    <li class="items__li">
-                        <a routerLink="" class="items items--2">Iniciar sesión</a>
                     </li>
                 </ul>
             </nav>
@@ -38,13 +38,13 @@
                                 <a class="nav-link active" aria-current="page" routerLink="/inicio">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active"  aria-current="page" routerLink="/turnos" >Turnos</a>
+                                <a class="nav-link active"  aria-current="page" (click)="scrollToBottomTurnos()"  routerLink="/turnos" >Turnos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/ayuda" (click)="scrollToBottomAyuda()"  class="nav-link active" aria-current="page">Ayuda</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="https://wa.me/543462334472?text=Hola,%20tenes%20turnos%20disponibles?" target="_blank" >Contactame</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" >Iniciar sesión</a>
                             </li>
                         </ul>
                     </div>

@@ -6,17 +6,25 @@ import { ClasicoComponent } from './Components/galery/clasico/clasico.component'
 import { CrestaComponent } from './Components/galery/cresta/cresta.component';
 import { DisenioComponent } from './Components/galery/disenio/disenio.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
-import { TurnosComponent } from './Components/turnos/turnos.component';
+import { TurnosFormComponent } from './Components/turnos-form/turnos-form.component';
+import { AyudaComponent } from './Components/ayuda/ayuda.component';
 
 const routes: Routes = [
   {
     path: 'inicio',
     component: InicioComponent
-  }, // Cambia 'inicio' a '' para la ruta base
+  },// Cambia 'inicio' a '' para la ruta base
+  
   {
     path: 'turnos',
-    component: TurnosComponent
+    component: TurnosFormComponent
   },
+
+  {
+    path: 'ayuda',
+    component: AyudaComponent
+  },
+
   {
     path: 'deg-en-punta',
     component: DegEnPuntaComponent

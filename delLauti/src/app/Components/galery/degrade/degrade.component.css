@@ -115,3 +115,30 @@
     margin: 15px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 800px) {
+    .img__ligth-box{
+        width: 70vw;
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img__ligth-box{
+        width: 70vw;
+        height: 50vh;
+    }
+
+    .next{
+        position: absolute;
+        transform: translateY(35vh);
+    }
+
+    .next--1{
+        margin-right:50vw ;
+    }
+
+    .next--2{
+        margin-left:50vw ;
+    }
+}

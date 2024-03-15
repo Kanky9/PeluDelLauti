@@ -16,4 +16,12 @@ export class MenuComponent implements OnInit{
   onElementClick() {
     this.isClicked = !this.isClicked;
   }
+
+  scrollToBottomTurnos() {
+    window.scrollTo({ top: 700, behavior: 'smooth' });
+  }
+
+  scrollToBottomAyuda() {
+    window.scrollTo({ top: 700, behavior: 'smooth' });
+  }
 }

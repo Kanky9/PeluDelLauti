@@ -1,0 +1,24 @@
+<div class="cont">
+    <div class="cont__loading" *ngIf="showLoadingMessage">
+        <nav class="cont__text">
+            <h3 class="text-center">Espere un momento y podrá elegir su turno...</h3>
+        </nav>
+        <div class="cont__loader">
+            <span class="loader_dot" style="--d: 200ms"> </span>
+            
+            <span class="loader_dot" style="--d: 400ms"> </span>
+            
+            <span class="loader_dot" style="--d: 600ms"> </span>
+            
+            <span class="loader_dot" style="--d: 800ms"> </span>
+            
+            <span class="loader_dot" style="--d: 1000ms"> </span>
+        </div>
+
+
+    </div>
+    
+    <div class="calendly-inline-widget" data-url="https://calendly.com/bournotsantino03?primary_color=f4d508"
+        style="min-width:320px;height:700px;" [style.display]="showLoadingMessage ? 'none' : 'block'"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</div>

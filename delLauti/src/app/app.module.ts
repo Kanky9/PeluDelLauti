@@ -16,8 +16,9 @@ import { CrestaComponent } from './Components/galery/cresta/cresta.component';
 import { DisenioComponent } from './Components/galery/disenio/disenio.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
 import { MenuComponent } from './Components/menu/menu.component';
-import { TurnosComponent } from './Components/turnos/turnos.component';
 import { FormsModule } from '@angular/forms';
+import { TurnosFormComponent } from './Components/turnos-form/turnos-form.component';
+import { AyudaComponent } from './Components/ayuda/ayuda.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     CrestaComponent,
     DisenioComponent,
     MenuComponent,
-    TurnosComponent,
+    TurnosFormComponent,
+    AyudaComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     NgOptimizedImage,
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
