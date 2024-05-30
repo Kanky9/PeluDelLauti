@@ -142,3 +142,38 @@
         margin-left:50vw ;
     }
 }
+
+@media screen and (max-width: 745px){
+
+    .img__ligth-box{
+        height: 60vh;
+    }
+
+    .next{
+        position: relative;
+        margin-top: 75vh;
+    }
+
+    .next-left{
+        transform: translateX(15vw);
+    }
+
+    .next-right{
+        transform: translateX(-15vw);
+    }
+}
+
+@media screen and (max-width: 485px){
+
+    .next{
+        padding: 0 8px 8px 8px;
+    }
+
+    .next-left{
+        transform: translateX(25vw);
+    }
+
+    .next-right{
+        transform: translateX(-25vw);
+    }
+}

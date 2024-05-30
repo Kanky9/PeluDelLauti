@@ -16,14 +16,14 @@
 
 <section class="cont__carousel" *ngIf="showCarousel">
     <article class="light-box" [ngClass]="{'active': isClicked, 'inactive': !isClicked}">
-        <a class="next" (click)="goToPreviousImage()">
+        <a class="next next-left" (click)="goToPreviousImage()">
             <i class="bi bi-arrow-left-short"></i>
         </a>
         <div class="cont_img--ligthBox">
             <img class="img__ligth-box" [src]="getCurrentImage().imageSrc" [alt]="getCurrentImage().imageAlt">
         </div>
 
-        <a class="next" (click)="goToNextImage()">
+        <a class="next next-right" (click)="goToNextImage()">
             <i class="bi bi-arrow-right-short"></i>
         </a>
         <a class="close" (click)="handleClick()" (click)="blurClick()" (click)="showCarousel = false">
